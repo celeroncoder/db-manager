@@ -11,7 +11,7 @@ let package = Package(
         .executableTarget(
             name: "DBManager",
             path: "DBManager",
-            exclude: ["Assets.xcassets"]
+            exclude: ["Assets.xcassets", "Info.plist", "AppIcon.icns"]
         )
     ]
 )
