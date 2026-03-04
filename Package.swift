@@ -10,7 +10,10 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "DBManager",
-            path: "DBManager"
+            path: "DBManager",
+            resources: [
+                .process("Assets.xcassets")
+            ]
         )
     ]
 )
