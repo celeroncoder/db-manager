@@ -6,10 +6,9 @@ struct DBManagerApp: App {
     @State private var appVM = AppViewModel()
 
     init() {
-        // Set app icon from bundled resource
-        let bundle = Bundle.module
-        if let url = bundle.url(forResource: "icon_1024", withExtension: "png", subdirectory: "Assets.xcassets/AppIcon.appiconset"),
-           let icon = NSImage(contentsOf: url) {
+        // Set app icon from embedded PNG data
+        if let data = EmbeddedIcon.pngData,
+           let icon = NSImage(data: data) {
             NSApplication.shared.applicationIconImage = icon
         }
     }

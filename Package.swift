@@ -11,9 +11,7 @@ let package = Package(
         .executableTarget(
             name: "DBManager",
             path: "DBManager",
-            resources: [
-                .process("Assets.xcassets")
-            ]
+            exclude: ["Assets.xcassets"]
         )
     ]
 )
